@@ -1,3 +1,14 @@
+// Loading
+mask = document.querySelector(".mask")
+
+window.addEventListener("load", ()=>{
+    mask.classList.add("mask_hide")
+    setTimeout(() => {
+        mask.remove()
+    },600);
+})
+
+
 //Burger
 const burger = document.querySelector(".burger")
 const burgerMenu = document.querySelector(".burger_menu")

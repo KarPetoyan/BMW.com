@@ -7,6 +7,58 @@
     font-family: sans-serif;
 }
 
+.mask{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: .6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load:before{
+    content: "";
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-image: url(img/logo-light.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    animation: load 1s linear infinite;
+}
+
+@keyframes load {
+    0%{
+       transform:rotate(0);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.mask_hide{
+    opacity: 0;
+}
+
 /*Main*/
 main{
     width: 100%;
@@ -37,7 +89,7 @@ header{
     justify-content: center;
     align-items: center;
     gap: 30px;
-    z-index: 999;
+    z-index: 990;
 }
 
 .header_div{
